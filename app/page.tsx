@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import course from "../data/course.json";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   const [selectedTopic, setSelectedTopic] = useState(

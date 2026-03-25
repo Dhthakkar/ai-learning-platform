@@ -3,6 +3,7 @@
 import { useState } from "react";
 import course from "../data/course.json";
 import Sidebar from "../components/Sidebar";
+import MCQBlock from "../components/MCQBlock";
 
 export default function Home() {
   const [selectedTopic, setSelectedTopic] = useState(
@@ -25,6 +26,11 @@ export default function Home() {
         <p className="whitespace-pre-line text-gray-300 leading-7">
           {selectedTopic.content}
         </p>
+
+        {selectedTopic.questions?.map((q, i) => (
+          <MCQBlock key={i} questionData={q} />
+        ))}
+
       </div>
 
     </div>

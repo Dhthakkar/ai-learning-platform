@@ -1,0 +1,32 @@
+{
+  "modules": [
+    {
+      "id": "module1",
+      "title": "Foundations",
+      "topics": [
+        {
+          "id": "t1",
+          "title": "Understanding Intelligence",
+          "content": "Imagine this...\n\nYou open Google Maps and it suggests the best route.\n\nMachines don’t think like humans. They follow patterns from data and make decisions based on that.\n\nThis is what we call intelligence in machines.",
+          "questions": [
+            {
+              "question": "Which statements correctly describe machine intelligence?",
+              "options": [
+                { "text": "Machines think like humans", "correct": false },
+                { "text": "Machines act based on data and patterns", "correct": true },
+                { "text": "Machines use emotions", "correct": false },
+                { "text": "Machines take actions based on input", "correct": true }
+              ],
+              "explanation": "Machine intelligence is about recognizing patterns and acting based on data."
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "title": "AI vs ML vs Deep Learning",
+          "content": "Artificial Intelligence is the full system.\n\nMachine Learning is the part that learns from data.\n\nDeep Learning is an advanced subset of machine learning."
+        }
+      ]
+    }
+  ]
+}

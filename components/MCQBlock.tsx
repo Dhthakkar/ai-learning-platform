@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 export default function MCQBlock({ questionData }) {
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState<number[]>([]);
   const [submitted, setSubmitted] = useState(false);
 
-  const toggle = (i) => {
+  const toggle = (i: number) => {
     if (selected.includes(i)) {
       setSelected(selected.filter((x) => x !== i));
     } else {
@@ -31,7 +31,7 @@ export default function MCQBlock({ questionData }) {
           <div
             key={i}
             onClick={() => !submitted && toggle(i)}
-            className={\`p-2 mt-2 cursor-pointer rounded \${style}\`}
+            className={`p-2 mt-2 cursor-pointer rounded ${style}`}
           >
             {opt.text}
           </div>

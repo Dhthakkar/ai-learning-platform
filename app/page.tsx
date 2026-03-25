@@ -1,19 +1,32 @@
 "use client";
 
-import course from "@/data/course.json";
+import { useState } from "react";
+import course from "../data/course.json";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
-  const firstTopic = course.modules[0].topics[0];
+  const [selectedTopic, setSelectedTopic] = useState(
+    course.modules[0].topics[0]
+  );
 
   return (
-    <div className="p-10 max-w-3xl mx-auto text-white">
-      <h1 className="text-3xl font-bold mb-6">
-        {firstTopic.title}
-      </h1>
+    <div className="flex h-screen">
+      
+      <Sidebar
+        selectedTopic={selectedTopic}
+        setSelectedTopic={setSelectedTopic}
+      />
 
-      <p className="whitespace-pre-line text-gray-300 leading-7">
-        {firstTopic.content}
-      </p>
+      <div className="flex-1 p-10 overflow-y-auto">
+        <h1 className="text-3xl font-bold mb-6">
+          {selectedTopic.title}
+        </h1>
+
+        <p className="whitespace-pre-line text-gray-300 leading-7">
+          {selectedTopic.content}
+        </p>
+      </div>
+
     </div>
   );
 }
